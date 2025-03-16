@@ -23,7 +23,7 @@ void printset(int level, int left, vector<int>& arr, int n){
     if(level == n){
         return;
     }
-    if(rec(level + 1, left, arr, n) == 1){
+    if(rec(level + 1, left, arr, n)){
         printset(level + 1, left, arr, n);
     } else if(rec(level + 1, left - arr[level], arr, n)){
         cout << arr[level] << " ";
