@@ -18,7 +18,7 @@ int rec(int i, int x)
     }
     int ans = 1e9;
     int min_seen = arr[i];
-    for (int j = i - 1; j >= 0; j--)
+    for (int j = i - 1; j >= -1; j--)
     {
         ans = min(ans, rec(j, x - 1) + min_seen);
         min_seen = min(min_seen, arr[j]);
