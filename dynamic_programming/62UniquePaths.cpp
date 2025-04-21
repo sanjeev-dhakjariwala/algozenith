@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
-/* class Solution
+class Solution
 {
 public:
     int rec(int i, int j, int m, int n)
     {
-        if (i > m || j > n)
+        if (i == m || j == n)
         {
             return 0;
         }
-        if (i == m && j == n)
+        if (i == m - 1 && j == n - 1)
         {
             return 1;
         }
@@ -19,10 +19,10 @@ public:
     }
     int uniquePaths(int m, int n)
     {
-        return rec(1, 1, m, n);
+        return rec(0, 0, m, n);
     }
-}; */
-class Solution
+};
+/* class Solution
 {
 public:
     vector<vector<int>> dp;
@@ -46,7 +46,7 @@ public:
         }
         return dp[m - 1][n - 1];
     }
-};
+}; */
 int main()
 {
     Solution obj;
